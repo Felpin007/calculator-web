@@ -7,7 +7,7 @@
     --accent: #6d5dfc;
     --accent-text: #fff;
     --danger: #ff6b6b;
-    --hover-bg: rgba(255,255,255,0.4);
+    --hover-bg: rgba(255, 255, 255, 0.4);
     --scrollbar-thumb: #cbd2d9;
 }
 
@@ -20,7 +20,7 @@ body[data-theme="dark"] {
     --accent: #8b7bff;
     --accent-text: #ffffff;
     --danger: #ff8a8a;
-    --hover-bg: rgba(255,255,255,0.08);
+    --hover-bg: rgba(255, 255, 255, 0.08);
     --scrollbar-thumb: #3a4357;
 }
 
@@ -54,7 +54,7 @@ body {
     border-radius: 30px;
     padding: 25px;
     box-shadow: 9px 9px 16px var(--shadow-dark),
-               -9px -9px 16px var(--shadow-light);
+        -9px -9px 16px var(--shadow-light);
 }
 
 .top-bar {
@@ -66,21 +66,25 @@ body {
 .theme-toggle {
     border: none;
     outline: none;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--text-main);
     background-color: var(--bg-color);
     cursor: pointer;
     box-shadow: 6px 6px 10px var(--shadow-dark),
-               -6px -6px 10px var(--shadow-light);
+        -6px -6px 10px var(--shadow-light);
     transition: all 0.2s ease;
 }
 
 .theme-toggle:active {
     box-shadow: inset 4px 4px 8px var(--shadow-dark),
-               inset -4px -4px 8px var(--shadow-light);
+        inset -4px -4px 8px var(--shadow-light);
 }
 
 .display-area {
@@ -95,7 +99,7 @@ body {
     background-color: var(--bg-color);
     border-radius: 15px;
     box-shadow: inset 6px 6px 10px var(--shadow-dark),
-               inset -6px -6px 10px var(--shadow-light);
+        inset -6px -6px 10px var(--shadow-light);
 }
 
 .preview-result {
@@ -129,13 +133,13 @@ button {
     background-color: var(--bg-color);
     cursor: pointer;
     box-shadow: 6px 6px 10px var(--shadow-dark),
-               -6px -6px 10px var(--shadow-light);
+        -6px -6px 10px var(--shadow-light);
     transition: all 0.2s ease;
 }
 
 button:active {
     box-shadow: inset 4px 4px 8px var(--shadow-dark),
-               inset -4px -4px 8px var(--shadow-light);
+        inset -4px -4px 8px var(--shadow-light);
     font-size: 1rem;
 }
 
@@ -150,7 +154,7 @@ button:active {
     background-color: var(--accent);
     color: var(--accent-text);
     box-shadow: 4px 4px 10px rgba(109, 93, 252, 0.4),
-               -4px -4px 10px var(--shadow-light);
+        -4px -4px 10px var(--shadow-light);
 }
 
 .btn-eq:hover {
@@ -168,7 +172,7 @@ button:active {
     border-radius: 20px;
     padding: 20px;
     box-shadow: 9px 9px 16px var(--shadow-dark),
-               -9px -9px 16px var(--shadow-light);
+        -9px -9px 16px var(--shadow-light);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -179,7 +183,7 @@ button:active {
     margin-bottom: 15px;
     color: var(--text-secondary);
     text-align: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding-bottom: 10px;
 }
 
@@ -198,7 +202,7 @@ button:active {
 
 .history-item:hover {
     background: var(--hover-bg);
-    border-color: rgba(0,0,0,0.05);
+    border-color: rgba(0, 0, 0, 0.05);
     color: var(--text-main);
 }
 
@@ -207,6 +211,15 @@ button:active {
     color: var(--accent);
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 10px; }
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+}

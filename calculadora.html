@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Neumórfica</title>
     <link rel="stylesheet" href="calculadora.css">
 </head>
+
 <body>
 
-<div class="calculator-wrapper">
-    
-    <!-- Calculadora Principal -->
-    <div class="calculator">
-        <div class="top-bar">
-            <button id="themeToggle" class="theme-toggle" type="button">Tema: Claro</button>
+    <div class="calculator-wrapper">
+
+        <!-- Calculadora Principal -->
+        <div class="calculator">
+            <div class="top-bar">
+                <button id="themeToggle" class="theme-toggle" type="button">☀️</button>
+            </div>
+            <div class="display-area">
+                <div id="preview" class="preview-result"></div>
+                <div id="display" class="current-input">0</div>
+            </div>
+
+            <div class="buttons-grid">
+                <button class="btn-clear" onclick="clearDisplay()">AC</button>
+                <button class="btn-clear" onclick="deleteDigit()">DEL</button>
+                <button class="btn-op" onclick="appendOperator('%')">%</button>
+                <button class="btn-op" onclick="appendOperator('/')">÷</button>
+
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button class="btn-op" onclick="appendOperator('*')">×</button>
+
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button class="btn-op" onclick="appendOperator('-')">-</button>
+
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="btn-op" onclick="appendOperator('+')">+</button>
+
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendNumber('.')">.</button>
+                <button class="btn-eq" onclick="calculateResult()">=</button>
+            </div>
         </div>
-        <div class="display-area">
-            <div id="preview" class="preview-result"></div>
-            <div id="display" class="current-input">0</div>
+
+        <!-- Painel Lateral de Histórico -->
+        <div class="history-panel" id="historyPanel">
+            <h3>Histórico</h3>
+            <div id="historyList">
+                <!-- Itens serão adicionados aqui via JS -->
+            </div>
         </div>
 
-        <div class="buttons-grid">
-            <button class="btn-clear" onclick="clearDisplay()">AC</button>
-            <button class="btn-clear" onclick="deleteDigit()">DEL</button>
-            <button class="btn-op" onclick="appendOperator('%')">%</button>
-            <button class="btn-op" onclick="appendOperator('/')">÷</button>
-
-            <button onclick="appendNumber('7')">7</button>
-            <button onclick="appendNumber('8')">8</button>
-            <button onclick="appendNumber('9')">9</button>
-            <button class="btn-op" onclick="appendOperator('*')">×</button>
-
-            <button onclick="appendNumber('4')">4</button>
-            <button onclick="appendNumber('5')">5</button>
-            <button onclick="appendNumber('6')">6</button>
-            <button class="btn-op" onclick="appendOperator('-')">-</button>
-
-            <button onclick="appendNumber('1')">1</button>
-            <button onclick="appendNumber('2')">2</button>
-            <button onclick="appendNumber('3')">3</button>
-            <button class="btn-op" onclick="appendOperator('+')">+</button>
-
-            <button onclick="appendNumber('0')">0</button>
-            <button onclick="appendNumber('.')">.</button>
-            <button class="btn-eq" onclick="calculateResult()">=</button>
-        </div>
     </div>
 
-    <!-- Painel Lateral de Histórico -->
-    <div class="history-panel" id="historyPanel">
-        <h3>Histórico</h3>
-        <div id="historyList">
-            <!-- Itens serão adicionados aqui via JS -->
-        </div>
-    </div>
-
-</div>
-
-<script src="calculadora.js"></script>
+    <script src="calculadora.js"></script>
 </body>
+
 </html>

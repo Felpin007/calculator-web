@@ -9,9 +9,9 @@ let shouldResetDisplay = false;
 function applyTheme(theme) {
     document.body.setAttribute('data-theme', theme);
     if (theme === 'dark') {
-        themeToggle.innerText = 'Tema: Escuro';
+        themeToggle.innerText = '🌙';
     } else {
-        themeToggle.innerText = 'Tema: Claro';
+        themeToggle.innerText = '☀️';
     }
 }
 

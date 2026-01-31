@@ -18,4 +18,4 @@ O foco deste projeto foi criar uma interface limpa, responsiva e com feedback vi
 
 ## Como rodar
 
-Abra o arquivo `calculadora.html` no seu navegador.
+Abra o arquivo `index.html` no seu navegador.
